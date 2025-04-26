@@ -1,0 +1,79 @@
+# Dependencias
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+package-lock.json
+yarn.lock
+
+# Archivos de entorno
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+*.env
+
+# Archivos de credenciales
+config/domoblock-devnew-66996e37f8ad.json
+*.pem
+*.key
+*.p12
+*.pfx
+credentials.json
+**/credentials/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de resultados y datos temporales
+results/
+temp/
+tmp/
+.tmp/
+*.tmp
+*.temp
+
+# Archivos de cobertura y pruebas
+coverage/
+.nyc_output/
+test-results/
+
+# Archivos de build
+dist/
+build/
+out/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# IDEs y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+.project
+.classpath
+.settings/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Otros
+.cache/
+.next/
+.nuxt/
+.docz/
+.cache/
