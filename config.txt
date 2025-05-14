@@ -1,5 +1,0 @@
-API_URL=https://domoblockfiat.devmitsoftware.com
-USER_EMAIL=franklin@domoblock.io
-PROJECT_NAME=1745547162924
-TEST_SIZE=20
-TOKEN_AMOUNT=1 

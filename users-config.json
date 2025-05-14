@@ -1,0 +1,26 @@
+{
+  "api_url": "https://redsys.api.devtop.online",
+  "project_name": "1747217659342",
+  "test_size": 10,
+  "token_amount": 1,
+  "users": [
+    {
+      "email": "javs1989@gmail.com",
+      "id": "xbMFfekxVMQ11C7VlhOWvPxQWxR2",
+      "wallet": "wlt_m_01JKV5CBFARWQV7PP5CHBZNGXZ",
+      "token_amount": 1
+    },
+    {
+      "email": "sergio@domoblock.io",
+      "id": "17cYcyupvaaMRbJMGc01aqM5vf32",
+      "wallet": "wlt_m_01JM2ZJ47VXN8VFY2GSWWQEN6A",
+      "token_amount": 2
+    },
+    {
+      "email": "franklin@domoblock.io",
+      "id": "JQ1455xbN0N7R70LUPBH4EUuTmG3",
+      "wallet": "wlt_m_01JSPSTQTQVDP8DEHPGFDH7BHT",
+      "token_amount": 3
+    }
+  ]
+} 
