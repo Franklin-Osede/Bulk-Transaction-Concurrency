@@ -1,69 +1,135 @@
-# Domoblock Mass Purchase Simulator
+Bulk Transaction Concurrency Simulator
 
-Un simulador de Node.js para realizar múltiples compras en proyectos de Domoblock, inspirado en el SaleTest original.
+Execute Concurrent Bulk Purchase Transactions on Domoblock
 
-## Características
+Welcome to the Bulk Transaction Concurrency Simulator, a Node.js utility crafted to stress-test and validate bulk purchase workflows on the Domoblock platform. By leveraging concurrent API calls, this tool helps you ensure reliability and performance under high-load scenarios.
 
-- Simula múltiples transacciones de compra
-- Configuración simple y directa
-- Formato similar al SaleTest original
+Core Features
 
-## Requisitos previos
+Concurrent Transactions: Execute multiple purchase requests in parallel.
 
-- Node.js 14.x o superior
-- npm o yarn
+Flexible Configuration: Environment-based settings via .env or custom config files.
 
-## Instalación
+Command-Line Controls: Debugging flags, balance checks, and token verifications.
 
-Clona el repositorio e instala las dependencias:
+Extensible Architecture: Modular codebase for easy enhancements and integrations.
 
-```bash
-git clone <repository-url>
-cd domoblock-mass-purchase
+Why Use This Simulator?
+
+Traditional load tests may not accurately reflect real-world usage patterns. This simulator:
+
+Validates your API’s concurrency handling.
+
+Identifies bottlenecks in Domoblock purchase flows.
+
+Ensures token distribution logic remains intact under stress.
+
+Motivation
+
+Deepen System Resilience: Test edge cases for simultaneous transactions.
+
+Performance Benchmarking: Measure throughput and latency under load.
+
+Automation Ready: Integrate into CI/CD pipelines for continuous testing.
+
+Getting Started
+
+Follow these instructions to set up and run the simulator locally.
+
+Prerequisites
+
+Node.js v14 or higher
+
+npm or yarn
+
+Installation
+
+# Clone the repository
+git clone https://github.com/Franklin-Osede/Bulk-Transaction-Concurrency.git
+cd Bulk-Transaction-Concurrency
+
+# Install dependencies
 npm install
-```
 
-## Configuración
+Configuration
 
-Edita el archivo `config.franklin.txt` o crea uno nuevo con el siguiente formato:
+Create a .env file or custom config (e.g., config.env) with the following variables:
 
-```
 API_URL=https://domoblockfiat.devmitsoftware.com
-USER_EMAIL=usuario@mail.net
-PROJECT_NAME=id_del_proyecto
+USER_EMAIL=user@example.com
+PROJECT_NAME=<project_id>
 TEST_SIZE=10
 TOKEN_AMOUNT=1
-```
 
-Dónde:
-- `API_URL`: URL de la API de Domoblock
-- `USER_EMAIL`: Email del usuario que realiza las compras
-- `PROJECT_NAME`: ID del proyecto en el que se realizarán las compras
-- `TEST_SIZE`: Número de transacciones a simular
-- `TOKEN_AMOUNT`: Número de tokens por transacción
+Variable
 
-## Uso
+Description
 
-Ejecuta el simulador con:
+API_URL
 
-```bash
-node index.js --config config.franklin.txt
-```
+Base URL for the Domoblock API
 
-### Opciones de línea de comandos
+USER_EMAIL
 
-- `--config <file>`: Especifica el archivo de configuración a utilizar (requerido)
-- `--checkAmount`: Verifica el saldo antes de cada compra (no implementado)
-- `--checkTokens`: Verifica los tokens disponibles (no implementado)
-- `--debug`: Muestra información detallada de las peticiones
-- `--help`: Muestra la información de ayuda
+Authentication email for transactions
 
-## Ejemplo con franklin@domoblock.io
+PROJECT_NAME
 
-Hay un archivo de configuración listo para el usuario franklin@domoblock.io:
+Domoblock project identifier
 
-```bash
-node index.js --config config.franklin.txt
-```
+TEST_SIZE
 
-Este archivo está configurado para realizar 10 compras de 1 token cada una en el proyecto con ID 1745547162924. 
+Number of transactions to simulate
+
+TOKEN_AMOUNT
+
+Tokens per transaction
+
+Running the Simulator
+
+node index.js --config .env
+
+Command-Line Options
+
+--config <file>     : Path to configuration file (required)
+
+--checkAmount       : Validate account balance before each purchase
+
+--checkTokens       : Verify token availability before purchase
+
+--debug             : Enable verbose API request logging
+
+--help              : Display help information
+
+Built With
+
+Node.js for the runtime environment
+
+Axios for HTTP requests
+
+dotenv for environment variable management
+
+Commander for CLI argument parsing
+
+Contributing
+
+Contributions are welcome! To contribute:
+
+Fork the repository
+
+Create a feature branch: git checkout -b feature/YourFeature
+
+Commit your changes: `git commit -m 'Add YourFeature'
+
+Push to the branch: git push origin feature/YourFeature
+
+Open a Pull Request
+
+License
+
+Distributed under the MIT License. See LICENSE for more information.
+
+Project Link
+
+Bulk Transaction Concurrency on GitHub
+
