@@ -35,4 +35,3 @@ USER5_TEST_SIZE=15
 
 # Configuración de Simulación
 BURST_TIME=2000
-DEFAULT_USERS=5

@@ -89,6 +89,10 @@ Running the Simulator
 
 node index.js --config .env
 
+# Or use a custom config file
+node index.js --config config.sergio.txt
+node index.js --config config.franklin.txt
+
 Command-Line Options
 
 --config <file>     : Path to configuration file (required)
