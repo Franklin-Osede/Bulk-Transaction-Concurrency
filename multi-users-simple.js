@@ -278,7 +278,27 @@ async function main() {
     
     let users;
     if (userSelection === 'all') {
-      users = getUsers(config, '1,2,3,4,5');
+      // Detectar dinámicamente qué usuarios están definidos en el config (USERn_EMAIL + TOKEN_AMOUNT + TEST_SIZE)
+      const detectedIndexes = [];
+      for (let i = 1; i <= 20; i++) {
+        const hasEmail = !!config[`USER${i}_EMAIL`];
+        const hasTokenAmount = config[`USER${i}_TOKEN_AMOUNT`] !== undefined && config[`USER${i}_TOKEN_AMOUNT`] !== '';
+        const hasTestSize = config[`USER${i}_TEST_SIZE`] !== undefined && config[`USER${i}_TEST_SIZE`] !== '';
+        if (hasEmail && hasTokenAmount && hasTestSize) {
+          detectedIndexes.push(i);
+        }
+      }
+
+      if (detectedIndexes.length === 0) {
+        console.log('❌ No se detectaron usuarios válidos en multi-users-config.txt');
+        process.exit(1);
+      }
+
+      const selectionString = detectedIndexes.join(',');
+      users = getUsers(config, selectionString);
+      if (detectedIndexes.length < 5) {
+        console.log(`ℹ️  Usuarios detectados automáticamente: ${selectionString}`);
+      }
     } else {
       users = getUsers(config, userSelection);
     }
